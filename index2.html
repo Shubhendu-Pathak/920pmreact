@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alignment</title>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            font-family: "Inria Sans", sans-serif;
+        }
+         .container{
+             border: 5px solid rgb(169, 9, 35); 
+             width: 100%;
+            background-color: cornflowerblue;
+            margin: 50px auto; 
+            
+
+        } 
+        .items{
+            border: 5px solid blue;
+            margin: 12px 10px;
+            padding:10px 12px; 
+            border-radius: 20px;
+            background-color: chartreuse;
+        }
+        #fruits{
+            float: left;
+            width: 40%;
+
+        }
+        #computer{
+            float: right;
+            width: 40%;
+
+        }
+        #stationary{
+            /* float:left; */
+            clear: both;
+            margin: 0 auto;
+            width: 83%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div id="fruits" class="items">
+            <h2>fruits</h2>
+          <p id="fruitspara" class="parac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil accusantium esse unde enim voluptates sit et reprehenderit numquam est iste in, aliquam dignissimos omnis earum, maiores, autem rem excepturi quisquam. Explicabo doloribus tempora incidunt eveniet et debitis saepe, consequatur mollitia necessitatibus nesciunt culpa ad porro at. Architecto aliquid ducimus est.</p>
+        </div>
+
+         <div id="computer" class="items">
+            <h2>computer</h2>
+            <p id="comuterpara" class="parac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil accusantium esse unde enim voluptates sit et reprehenderit numquam est iste in, aliquam dignissimos omnis earum, maiores, autem rem excepturi quisquam. Explicabo doloribus tempora incidunt eveniet et debitis saepe, consequatur mollitia necessitatibus nesciunt culpa ad porro at. Architecto aliquid ducimus est.</p>
+        </div>
+
+         <div id="stationary" class="items">
+            <h2>stationary</h2>
+        <p id="stationarypara" class="parac">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil accusantium esse unde enim voluptates sit et reprehenderit numquam est iste in, aliquam dignissimos omnis earum, maiores, autem rem excepturi quisquam. Explicabo doloribus tempora incidunt eveniet et debitis saepe, consequatur mollitia necessitatibus nesciunt culpa ad porro at. Architecto aliquid ducimus est.</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "one",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite", 
+    "build": "vite build", 
+    "preview": "vite preview" 
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10",
+    "vite": "^5.4.7"
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>PROMISES</h1>
+<p>
+    pending =  process ongoing;<br> 
+    fulfilled = process done 100%;<br> 
+    rejected = process failed/error <br> 
+    finally = conclusion
+</p>
+
+<script>
+
+// let p1 = new Promise( ()=>{} )
+// console.log(p1);
+// console.log(typeof(p1));
+
+// let p1 = new Promise( (resolve, rejected)=>{
+// // resolve(456)
+// rejected('henry')
+// })
+
+// console.log(p1);
+// console.log(typeof(p1));
+
+//-----------
+
+// setTimeout(()=>{ console.log('kite')}, 5000)
+
+//-----------
+
+// let p1 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     resolve('Promise 1 resolved successfully')
+//     // rejected('Promise 1 resolved unsuccessfully')
+// }, 2000);
+// })
+
+// console.log(p1);
+// console.log(typeof(p1));
+
+// consuming a promise
+
+// p1
+// .then((val)=>{console.log(val)})
+// .catch((err)=>{console.log(err)})
+// .finally(()=>console.log('Process ended'))
+
+//-------------------------
+
+//NESTING
+
+// let p1 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     resolve('Promise 1 resolved successfully')
+//     // rejected('Promise 1 resolved unsuccessfully')
+// }, 2000);
+// })
+
+// //-------
+
+// p1
+// .then((val)=>{
+//     console.log('P1 100% done');
+
+// let p2 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     resolve('Promise 2 resolved successfully')
+//     // rejected('Promise 2 resolved unsuccessfully')
+// }, 3000);
+// })
+
+// return p2
+
+// }).then((para)=>{
+//     console.log(para);
+
+//     let p3 = new Promise( (resolve, rejected)=>{
+//     setTimeout(() => {
+//         // resolve('Promise 3 resolved successfully')
+//         rejected('Promise 3 resolved unsuccessfully')
+//     }, 4000);
+//     })
+
+//     return p3
+    
+// }).then((para1)=>{
+//     console.log(para1)
+    
+// }).catch((err)=>{
+//     console.log(err);
+    
+// })
+
+//-----------------------
+
+// multiple handlers
+
+// let p1 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     // resolve('Promise 1 resolved successfully')
+//     rejected('Promise 1 resolved unsuccessfully')
+// }, 3000);
+// })
+
+// let p2 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     resolve('Promise 2 resolved successfully')
+//     // rejected('Promise 2 resolved unsuccessfully')
+// }, 6000);
+// })
+
+// let p3 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     // resolve('Promise 3 resolved successfully')
+//     rejected('Promise 3 resolved unsuccessfully')
+// }, 4000);
+// })
+
+// // let a = Promise.all([p1, p2, p3])
+// // let a = Promise.allSettled([p1, p2, p3])
+// // let a = Promise.race([p1, p2, p3])
+// let a = Promise.any([p1, p2, p3])
+
+// a.then((values)=>{
+//     console.log(values);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+//-------------------
+
+// async/await
+
+// let p1 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     // resolve('Promise 1 resolved successfully')
+//     rejected('Promise 1 resolved unsuccessfully')
+// }, 3000);
+// })
+
+// function one(){
+//     return p1
+// }
+
+// one()
+// .then((val)=>{
+//     console.log(val);
+    
+// })
+// .catch((err)=>{
+//     console.log(err);
+    
+// })
+
+//-----------------------
+
+// async function one(para){
+//      return para
+// }
+
+// console.log(one('Promise 1'));
+
+//------------------
+
+// let p1 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     resolve('Promise 1 resolved successfully')
+//     // rejected('Promise 1 resolved unsuccessfully')
+// }, 3000);
+// })
+
+// let p2 = new Promise( (resolve, rejected)=>{
+// setTimeout(() => {
+//     resolve('Promise 2 resolved successfully')
+//     // rejected('Promise 2 resolved unsuccessfully')
+// }, 6000);
+// })
+
+// async function one(){
+//     console.log('Start');
+
+
+//     let x = await p1
+//     console.log('p1 done');
+//     let y = await p2
+//     console.log('p2 done');
+    
+//     return [x, y]
+    
+    
+// }
+
+// let two = one()
+// two.then((val)=>{
+//     console.log(val);
+// }).catch((err)=>{
+//     console.log(err);
+// })
+
+
+
+
+</script>
+
+</body>
+</html>

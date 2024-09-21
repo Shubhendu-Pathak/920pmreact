@@ -1,0 +1,220 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- CSS only -->  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">   
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"   
+          crossorigin="anonymous">   
+    <title>Document</title> 
+</head> 
+<body> 
+     
+    
+    <div class="container">   
+        <div class="row">   
+          <div class="col s12">   
+            <div id="main" class="card">   
+              <div class="card-content">   
+                <span class="card-title">Task List</span>   
+                <div class="row">   
+                  <form id="task-form" method="post">   
+                    <div class="input-field col s12">   
+                      <input type="text" name="task" id="task" value="Walking Stick">   
+                      <label style="color: blue;" for="task">New Task</label>   
+                    </div>   
+                </div>   
+                <input type="submit" value="Add Task" class="btn">   
+                </form>   
+              </div>   
+              <div class="card-action">   
+                <h5 id="task-title">Tasks</h5>   
+                <ul class="collection">
+                  <li class="collection-item">   
+                    List Item   
+                    <a href="#" class="delete-item secondary-content">   
+                      <i class="fa fa-remove"></i>   
+                    </a>   
+                  </li>
+                  <li class="collection-item">   
+                    List Item   
+                    <a href="#" class="delete-item secondary-content">   
+                      <i class="fa fa-remove"></i>   
+                    </a>   
+                  </li><li class="collection-item">   
+                    List Item   
+                    <a href="#" class="delete-item secondary-content">   
+                      <i class="fa fa-remove"></i>   
+                    </a>   
+                  </li>   
+                  <li class="collection-item">   
+                    List Item   
+                    <a href="#" class="delete-item secondary-content">   
+                      <i class="fa fa-remove"></i>   
+                    </a>   
+                  </li>   
+                  <li class="collection-item">   
+                    List Item   
+                    <a href="#" class="delete-item secondary-content">   
+                      <i class="fa fa-remove"></i>   
+                    </a>   
+                  </li>
+                </ul>   
+                <!-- <button
+                onclick="one()"
+                 class="clear-tasks btn black" 
+                 href="#">
+                 Clear Tasks
+                </button>    -->
+
+                <button
+                 class="clear-tasks btn black" 
+                 href="#">
+                 Clear Tasks
+                </button>   
+              </div>   
+            </div>   
+          </div>   
+        </div>   
+      </div>   
+      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>   
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>   
+
+
+<script>
+
+// // create
+// let newLi = document.createElement('li')
+
+// // newLi.classList.add('collection-item')
+// // newLi.setAttribute('class','collection-item')
+// newLi.className='collection-item'
+
+// newLi.textContent = 'NEW-LIST-ITEM'
+
+// console.log(newLi);
+
+// //target parent
+// let parent = document.querySelector(".collection")
+// console.log(parent);
+
+// //apend li in ul
+// parent.appendChild(newLi)
+
+// //remove
+// newLi.remove()
+
+//--------------- REPLACE ------------------
+
+// create
+// let newLi = document.createElement('li')
+
+// // newLi.classList.add('collection-item')
+// // newLi.setAttribute('class','collection-item')
+// newLi.className='collection-item'
+
+// newLi.textContent = 'NEW-LIST-ITEM'
+
+// console.log(newLi);
+
+// //target parent
+// let parent = document.querySelector(".collection")
+// console.log(parent);
+
+// let li1 = document.querySelectorAll('.collection-item')[2]
+// console.log(li1);
+
+// //replace first with new
+// parent.replaceChild(newLi, li1)
+
+//------------------------------- events
+
+// function one(){
+//     console.log(231);
+    
+// }
+
+// alternate
+
+// let btn = document.querySelector('.clear-tasks')
+// console.log(btn);
+
+// btn.addEventListener('click', one)
+// btn.addEventListener('dblclick', one)
+// btn.addEventListener('mousedown', one)
+// btn.addEventListener('mouseup', one)
+// btn.addEventListener('mouseenter', one)
+// btn.addEventListener('mouseleave', one)
+
+// function one(e){
+//     // console.log(435);
+
+//    let a = e
+//    console.log(a);
+//    console.log(a.type);
+// //    console.log(e.target.className);
+   
+// // coords relative to window
+// // console.log( a.clientX , a.clientY);
+
+
+// // coords relative to element
+// // console.log( a.offSetX , a.offSetY);
+   
+// }
+
+//---------------- ex1
+
+// let card = document.querySelector('.card')
+// console.log(card);
+// let h5 = document.getElementById('task-title')
+// console.log(h5);
+
+
+// card.addEventListener('mousemove',one)
+
+// function one(e){
+//     console.log(e);
+    
+//     h5.textContent = `X:${e.offsetX}, Y:${e.offsetY}`
+
+//     document.body.style.backgroundColor=`rgb(${e.offsetX}, ${e.offsetY}, 22)`
+
+// }
+
+// keyboard events
+
+// let inp = document.getElementById('task')
+// console.log(inp);
+
+// inp.value = ''
+
+// inp.addEventListener('keydown', one)
+// inp.addEventListener('keyup', one)
+// inp.addEventListener('keypress', one)
+// inp.addEventListener('cut', one)
+// inp.addEventListener('copy', one)
+// inp.addEventListener('paste', one)
+// inp.addEventListener('focus', one)
+// inp.addEventListener('blur', one)
+
+// function one(e){
+//     // console.log(e);
+//     // console.log(e.target.value);
+//     console.log(e.type);  
+// }
+
+///scroll
+
+// window.addEventListener("scroll",()=>{
+//     console.log(12345);
+    
+// })
+
+</script>
+
+
+
+</body>
+</html>
